@@ -1,0 +1,10 @@
+def solve(time):
+    data=time.split(":")
+    if(int(data[0])>=12):
+        return "PM"
+    else:
+        return "AM"
+
+
+time="12:45"
+print("time:",solve(time))
