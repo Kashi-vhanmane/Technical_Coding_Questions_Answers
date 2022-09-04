@@ -1,3 +1,84 @@
+
+# str1=input("Enter the input:")
+# str2=input("Enter the input you want to remove from original string:")
+#
+# res=""
+# for i in range(len(str1)):
+#     if str1[i] not in str2:
+#         res+=str1[i]
+# print(res)
+
+#
+# l=[5,1,2,3,4,5]
+# def solve(option):
+#     option.sort()
+#     return option[:2]
+#
+# print(solve(l))
+
+# time="00:45"
+#
+# def solve(time):
+#     t=time.split(":")
+#     if(int(t[0])<12):
+#         return "Am"
+#     else:
+#         return "Pm"
+# print(solve(time))
+
+import  math
+
+# n=10
+# l=[i for i in range(0,n+1,2)]
+# print(l)
+# print(sum(l))
+
+
+# def no_of_ways(s):
+#     n = len(s)
+#
+#     # To store the count of
+#     # prefix and suffix
+#     count_left = 0
+#     count_right = 0
+#
+#     # Loop to count prefix
+#     for i in range(0, n, 1):
+#         if (s[i] == s[0]):
+#             count_left += 1
+#         else:
+#             break
+#
+#     # Loop to count suffix
+#     i = n - 1
+#     while (i >= 0):
+#         if (s[i] == s[n - 1]):
+#             count_right += 1
+#         else:
+#             break
+#
+#         i -= 1
+#
+#     # First and last characters of
+#     # the string are same
+#     if (s[0] == s[n - 1]):
+#         return ((count_left + 1) *
+#                 (count_right + 1))
+#
+#     # Otherwise
+#     else:
+#         return (count_left + count_right + 1)
+#
+#
+# # Driver Code
+# if __name__ == '__main__':
+#     s = "abaa"
+#     print(no_of_ways(s))
+
+# This code is contri
+
+
+
 def solve(date):
     str=date.split("-")
     month=int(str[1])
@@ -34,9 +115,17 @@ def solve(date):
             print("Total of oddMonths:",oddmonth)
 
 
+    if(day>31 or month>12):
+        return "Invalid result"
+    else:
+        totaldays=sum(evenmonth)+sum(oddmonth)+feb+july+day
+        return totaldays
 
-    totaldays=sum(evenmonth)+sum(oddmonth)+feb+july+day
-    return totaldays
-
-date="31-12-2023"
+date="32-01-2023"
 print("Total Days:",solve(date))
+
+
+
+
+
+
