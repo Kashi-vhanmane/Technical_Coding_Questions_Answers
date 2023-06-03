@@ -1,0 +1,18 @@
+from decimal import Decimal
+
+N = int(input())
+data = [int(x) for x in input().split()]
+
+number=""
+div=0
+for i in data:
+    div=i%10
+    number+=str(div)
+
+d=Decimal(number)
+
+if int(d)%10==0:
+    print("Yes")
+else:
+    print("No")
+
