@@ -1,0 +1,12 @@
+coun repeated substring from given string
+
+Code:
+from collections import Counter
+
+name=input()
+
+l=list(name)
+
+c=Counter(l)
+
+print(c)
