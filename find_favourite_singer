@@ -1,0 +1,62 @@
+Bob has a playlist of 
+ songs, each song has a singer associated with it (denoted by an integer)
+
+Favourite singer of Bob is the one whose songs are the most on the playlist
+
+Count the number of Favourite Singers of Bob
+
+Input Format 
+
+The first line contains an integer 
+, denoting the number of songs in Bob's playlist.
+
+The following input contains 
+ integers, 
+ integer denoting the singer of the 
+ song.
+
+Output Format
+
+Output a single integer, the number of favourite singers of Bob
+
+Note: Use 64 bit data type
+
+Constraints
+
+
+Sample Input
+5
+1 1 2 2 4
+Sample Output
+2
+
+
+
+Code:
+
+# N=int(input())
+# songs=list(map(int,input().split()))
+
+# def is_repeated(element):
+#     return songs.count(element)>1
+
+# repeated_songs=list(filter(is_repeated,songs))
+
+# if len(repeated_songs)>0:
+#     print(len(set(repeated_songs)))
+# else:
+#     print(len(songs))
+
+
+from collections import Counter
+
+num_songs = int(input())
+singers = list(map(int, input().split()))
+
+singer_counts = Counter(singers)
+
+max_count = max(singer_counts.values())
+num_fav_singers = sum(count == max_count for count in singer_counts.values())
+
+print(num_fav_singers)
+
